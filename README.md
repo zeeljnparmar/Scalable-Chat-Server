@@ -21,3 +21,19 @@ A scalable real-time chat server built using **Node.js**, **Express**, **Redis**
 ```bash
 git clone https://github.com/zeeljnparmar/Scalable-Chat-Server.git
 cd Scalable-Chat-Server
+
+
+🧪 Example with curl
+# Create a new conversation
+curl -X POST http://localhost:3000/api/conversations
+
+# Send a message
+curl -X POST http://localhost:3000/api/conversations/<conversationId>/messages \
+  -H "Content-Type: application/json" \
+  -d '{"sender": "agent", "content": "Hello, how can I help?", "timestamp": "2025-04-05T14:01:00Z"}'
+
+# Fetch messages
+curl http://localhost:3000/api/conversations/<conversationId>
+
+# Delete a message
+curl -X DELETE http://localhost:3000/api/conversations/<conversationId>/messages/<messageId>
