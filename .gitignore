@@ -1,0 +1,5 @@
+.env
+swagger.json
+node_modules/ 
+/dist
+/test
