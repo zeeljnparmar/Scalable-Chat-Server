@@ -13,6 +13,12 @@ A scalable real-time chat server built using **Node.js**, **Express**, **Redis**
 - Error-handled, modular, and production-ready codebase
 
 ---
+### 📦 Notes
+- sender field can be "customer" or "agent"
+- All timestamps must follow ISO 8601 format (e.g. "2025-04-05T14:00:00Z")
+- All messages are stored temporarily in Redis
+- Conversations are automatically deleted after 30 minutes of inactivity
+
 
 ## 🛠️ Setup Instructions
 
